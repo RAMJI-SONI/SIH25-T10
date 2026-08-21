@@ -545,7 +545,7 @@
     renderMarkers();
   }
 
- /* function renderMarkers(){
+   function renderMarkers(){
     markerLayer.clearLayers();
     const list = LOCATIONS.filter(function(l){ return activeFilter==="all" || l.hazard===activeFilter; });
     list.forEach(function(loc){
@@ -565,7 +565,7 @@
       marker.on("click", function(){ selectLocation(loc.id); });
       loc._marker = marker;
     });
-  } */
+  }
 
   
   /* ---------------- Alerts ---------------- */
@@ -577,7 +577,7 @@
     });
   }
 
- /* function renderAlerts(){
+   function renderAlerts(){
     const wrap = document.getElementById("panel-alerts");
     wrap.innerHTML = "";
     const filtered = alertsLog.filter(function(a){
@@ -606,9 +606,9 @@
       item.addEventListener("click", function(){ selectLocation(loc.id); showTab("detail"); });
       wrap.appendChild(item);
     });
-  } */
+  } 
 
-  function renderAlerts(){
+    function renderAlerts(){
     const wrap = document.getElementById("panel-alerts");
     wrap.innerHTML = "";
     const filtered = alertsLog.filter(function(a){
@@ -619,7 +619,7 @@
     if(filtered.length===0){
       wrap.innerHTML = '<div class="detail-empty">No alerts for this hazard filter right now.</div>';
       return;
-    }
+    } 
 
     filtered.forEach(function(a){
       const loc = LOCATIONS.find(function(l){return l.id===a.locId;});
